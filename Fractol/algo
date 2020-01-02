@@ -1,0 +1,92 @@
+srcs/event_init.c:	data->echelle = 2.0;
+srcs/event_init.c:	data->precision = 30.0;
+srcs/event_init.c:	ft_new_cor(&data->add, 0.0, 0.0);
+srcs/event_init.c:	ft_new_cor(&data->ctr, 0.0, 0.0);
+srcs/event_init.c:		data->ctr.x -= 0.5;
+srcs/event_init.c:		data->state = 0;
+srcs/event_init.c:		data->state += (data->state < 4) ? 1 : -4;
+srcs/event_init.c:		data->echelle = 2.0;
+srcs/event_init.c:		data->lum = 0.0;
+srcs/event_init.c:		data->precision = 30.0;
+srcs/event_init.c:		if (data->state == 0)
+srcs/event_init.c:		else if (data->state == 1)
+srcs/event_init.c:		else if (data->state == 2)
+srcs/event_init.c:		else if (data->state == 3)
+srcs/event_init.c:		else if (data->state == 4)
+srcs/event_init.c:	data->event.key = &ft_keyboard_event;
+srcs/event_init.c:	mlx_hook(data->wind, KeyPress, KeyRelease, data->event.key, data);
+srcs/event_init.c:	data->event.mouse = &ft_mouse_param;
+srcs/event_init.c:	mlx_hook(data->wind, MotionNotify, PointerMotionMask, ft_mouse_param, data);
+srcs/event_init.c:	data->event.mouse_wheel = &ft_mouse_zoom_in;
+srcs/event_init.c:	mlx_hook(data->wind, Button4, ButtonPressMask, ft_mouse_zoom_in, data);
+srcs/event_init.c:	mlx_put_image_to_window(data->init, data->wind, data->img_mlx, 0, 0);
+srcs/event_keyboard.c:	data->state = 4;
+srcs/event_keyboard.c:	data->precision = 100;
+srcs/event_keyboard.c:	data->echelle = 2.5;
+srcs/event_keyboard.c:	data->ctr.y -= 0.5;
+srcs/event_keyboard.c:	data->add.x = x;
+srcs/event_keyboard.c:	data->add.y = y;
+srcs/event_keyboard.c:	data->state = state;
+srcs/event_keyboard.c:		data->color += 0.1;
+srcs/event_keyboard.c:		data->color -= 0.1;
+srcs/event_keyboard.c:	else if(keycode == 125 && data->precision > 10.0)
+srcs/event_keyboard.c:			data->precision -= 1.0;
+srcs/event_keyboard.c:	else if (keycode == 126 && data->precision < 100.0)
+srcs/event_keyboard.c:			data->precision += 1.0;
+srcs/event_keyboard.c:		data->lum -= 0.1;
+srcs/event_mouse.c:	if (!ft_strcmp(data->algo, "julia") && data->clic != 1)
+srcs/event_mouse.c:			data->add.x += (mx > 0) ? 0.001 : -0.001;
+srcs/event_mouse.c:			data->add.y -= (my > 0) ? 0.001 : -0.001;
+srcs/event_mouse.c:		data->echelle *= (keycode == 78 ? 0.9 : 1.1);
+srcs/event_mouse.c:		data->precision *= (keycode == 78 ? 1.02 : 0.98);
+srcs/event_mouse.c:		data->clic = (!data->clic) ? 1 : 0;
+srcs/event_mouse.c:		data->ctr.x += data->echelle * ((2 * (double)x / ECRAN_X) - RATIO_X);
+srcs/event_mouse.c:		data->ctr.y += data->echelle * ((2 * (double)y / ECRAN_X) - RATIO_Y);
+srcs/main.c:	data->init = mlx_init();
+srcs/main.c:	data->wind = mlx_new_window(data->init, ECRAN_X, ECRAN_Y, "fractol");
+srcs/main.c:	data->img_mlx = mlx_new_image(data->init, ECRAN_X, ECRAN_Y);
+srcs/main.c:	data->img = mlx_get_data_addr(data->img_mlx,
+srcs/main.c:									&data->bpp, &data->sz, &data->endian);
+srcs/main.c:	data->color = 0.0;
+srcs/main.c:	data->lum = 0.0;
+srcs/main.c:	mlx_loop(data->init);
+srcs/new.c:	mlx_destroy_image(data->init, data->img_mlx);
+srcs/new.c:	mlx_destroy_window(data->init, data->wind);
+srcs/parse.c:	pnt.x = data->ctr.x + ((2 * pix.x / ECRAN_X) - RATIO_X) * data->echelle;
+srcs/parse.c:	pnt.y = data->ctr.y + ((2 * pix.y / ECRAN_X) - RATIO_Y) * data->echelle;
+srcs/parse.c:	if (!data->state || data->state == 4)
+srcs/parse.c:		add = data->add;
+srcs/parse.c:	tsl.t += data->color;
+srcs/parse.c:	while (i++ <= data->precision && sqrt(pnt.x * pnt.x + pnt.y * pnt.y) < 4)
+srcs/parse.c:		ft_carre(&pnt, &add, &tsl, data->state);
+srcs/parse.c:	tsl.t /= data->precision;
+srcs/parse.c:	tsl.l += data->lum;
+srcs/parse.c:	ft_put_pixel(data, pix.x, pix.y, mlx_get_color_value(data->wind,
+srcs/parse.c:	y = data->pix.y;
+srcs/parse.c:	while (data->pix.y < (y + 100.0))
+srcs/parse.c:		while (data->pix.x <= ECRAN_X)
+srcs/parse.c:			ft_parse_pixel(data->pix, data->lib);
+srcs/parse.c:			data->pix.x++;
+srcs/parse.c:		data->pix.x = 0;
+srcs/parse.c:		data->pix.y += 1.0;
+srcs/parse.c:	while (data->thr)
+srcs/parse.c:						&data->thr->thread, NULL, ft_new_thread, data->thr)))
+srcs/parse.c:			data->thr = data->thr->next;
+srcs/parse.c:	data->thr = data->first;
+srcs/parse.c:	while (data->thr)
+srcs/parse.c:		pthread_join(data->thr->thread, NULL);
+srcs/parse.c:		cop = data->thr;
+srcs/parse.c:		data->thr = data->thr->next;
+srcs/parse.c:	data->thr = NULL;
+srcs/parse.c:		if (!data->thr)
+srcs/parse.c:			data->first = NULL;
+srcs/parse.c:			data->thr = ft_new_thr(pix, data->ctr, data);
+srcs/parse.c:			data->first = data->thr;
+srcs/parse.c:			data->thr->next = ft_new_thr(pix, data->ctr, data);
+srcs/parse.c:			data->thr = data->thr->next;
+srcs/parse.c:	data->thr = data->first;
+srcs/print.c:			data->sz * (ECRAN_Y + 0) > data->sz * y + (x * 4) + 3)
+srcs/print.c:		data->img[data->sz * y + (x * 4)] = color;
+srcs/print.c:		data->img[data->sz * y + (x * 4) + 1] = color >> 8;
+srcs/print.c:		data->img[data->sz * y + (x * 4) + 2] = color >> 16;
+srcs/print.c:		data->img[data->sz * y + (x * 4) + 3] = 0;

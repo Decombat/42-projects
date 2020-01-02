@@ -1,0 +1,1 @@
+dig slash16.org | grep "A" | grep slash | grep -v ";" | cut -c 23-35

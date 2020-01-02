@@ -1,0 +1,129 @@
+div.cadre1
+{
+	position: relative;
+	top: 10px;
+	width: 1420px;
+	height: 140px;
+	margin: 0 auto;
+	border-radius: 10px;
+	background-color: #909090;
+	box-shadow: 12px 12px 20px #000;
+	display: flex;
+	justify-content: space-between;
+}
+div.cadre2
+{
+	position: relative;
+	width: 1023px;
+	height: 583px;
+	margin: 0 auto;
+	border-radius: 10px;
+	background-color: #909090;
+	box-shadow: 12px 12px 20px #000;
+}
+div.cadre3
+{
+	position: fixed;
+	top: 682px;
+	left: 193px;
+	width: 520px;
+	height: 173px;
+	background-color: #88ff89;
+	border-radius: 10px;
+	box-shadow: 12px 12px 20px #000;
+}
+div.bord
+{
+	position: relative;
+	width: 141px;
+	height: 427px;
+	background-color: #909090;
+	border-radius: 10px;
+	box-shadow: 12px 12px 20px #000;
+	display: flex;
+	flex-direction: column;
+	justify-content: flex-start;
+}
+div.flex
+{
+	position: relative;
+	margin: 0 auto;
+	width: 1360px;
+	top: 30px;
+	display: flex;
+	justify-content: space-between;
+}
+div.fond
+{
+	background-color: #515151;
+}
+.margin
+{
+		padding-top: 10px;
+		margin: 0 auto;
+}
+div.wall
+{
+	width: 120px;
+	height: 74px;
+	background-image: url('resources/brick.jpg');
+	background-repeat: repeat;
+}
+.center
+{
+	margin-top: 10px;
+	margin-bottom: 10px;
+}
+.btp
+{
+	width: 20px;
+}
+.loupe
+{
+	top:30px;
+	position: relative;
+}
+.img1
+{
+	margin-right: 10px;
+	position: relative;
+	display: flex;
+	flex-direction: column;
+	justify-content: space-between;
+}
+.img3
+{
+	position: relative;
+	display:flex;
+}
+.cluster
+{
+	display: block;
+	width: 98%;
+	margin: 10px;
+}
+.texte
+{
+	padding-left: 10px;
+	font-family: arial;
+	font-size: 17px;
+	font-weight: normal;
+}
+a.map
+{
+	display: block;
+	height: 230px;
+	width: 150px;
+	position: absolute;
+	top: 320px;
+	left: 320px;
+}
+a.map2
+{
+	position: absolute;
+	display:block;
+	height: 180px;
+	width: 200px;
+	top:320px;
+	left:800px;
+}

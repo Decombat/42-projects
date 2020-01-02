@@ -1,0 +1,166 @@
+html, body {
+  margin: 0px;
+  padding: 0px;
+  font-size: 30px;
+}
+
+img {
+  position: fixed;
+  top: 2vh;
+  margin-left: 25vw;
+  weight: 100px;
+  height: 100px;
+}
+
+div.block {
+  position: relative;
+  display: flex;
+  justify-content: space-between;
+  left: 5vw;
+  top: 3vh;
+  width: 90vw;
+  height: 70vh;
+}
+
+div.decallage {
+  height: 20vh;
+  width: calc(90vw/18*15);
+  top: 6vh;
+  left: 20vw;
+}
+
+div.small-block {
+  display: flex;
+  flex-direction: column;
+  justify-content: flex-end;
+  width: calc(100%/18);
+  height: 100%;
+}
+
+div.colone {
+  display: flex;
+  flex-direction: column;
+  height: 100%;
+  width: calc(100%/15);
+}
+
+div.block-down {
+  line-height: 0%;
+  height: 100%;
+}
+
+textarea.texte {
+  overflow: hidden;
+  line-height: 1;
+  background-color: transparent;
+  border: none;
+  width: 1.5em;
+  height: 1em;
+  resize: none;
+  color: black;
+  text-align: center;
+  font-size: 1em;
+  font-family: 'space mono';
+  transition-duration: 1s;
+  transition-timing-function: ease;
+}
+
+.elements {
+  box-sizing: border-box;
+  line-height: 0%;
+  position: relative;
+  text-align: center;
+  background-color: grey;
+  border: 3px solid white;
+  width: 100%;
+  height: calc(100%/7);
+  transition-property: all;
+  transition-duration: 1s;
+  transition-delay: 0s;
+  transition-timing-function: ease;
+}
+
+p.numero {
+  box-sizing: border-box;
+  line-height: 0%;
+  position: relative;
+  text-align: right;
+  color: black;
+  font-size: .3em;
+  right: .1rem;
+  font-family: 'space mono';
+}
+
+p.size {
+  box-sizing: border-box;
+  position: relative;
+  text-align: left;
+  left: .1rem;
+}
+
+.elements:hover {
+  background-color: yellow;
+  transform: translateY(-5px);
+}
+
+.group0 {
+  background-color: #e5e5e5;
+}
+
+.group1 {
+  background-color: #e3e3e3;
+}
+
+.group2 {
+  background-color: #b8b8b8;
+}
+
+.group3 {
+  background-color: #ececec;
+}
+
+.group4 {
+  background-color: #c3c3c3;
+}
+
+.group5 {
+  background-color: #646464;
+}
+
+.group6 {
+  background-color: #787878;
+}
+
+.group7 {
+  background-color: #d2d2d2;
+}
+
+.group8 {
+  background-image: linear-gradient(black, grey, white);
+  background-color: white;
+}
+
+.group9 {
+  background-image: linear-gradient(79deg, grey, white, grey, black);
+  background-color: white;
+}
+
+@media screen and (max-width:1350px), screen and(max-height:750px) {
+  textarea.texte {
+    font-size: 0.5em;
+  }
+
+  p.numero {
+    font-size: .2em;
+  }
+}
+
+@media screen and (max-width:840px), screen and(max-height:620px) {
+  textarea.texte {
+    font-size: 0.3em;
+  }
+
+  p.numero {
+    font-size: .1em;
+  }
+}
